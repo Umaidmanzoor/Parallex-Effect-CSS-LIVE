@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Documents</title>
+<style>
+.container {
+  display: flex;
+  gap: 50px;
+  justify-content: center;
+  margin-top: 50px;
+}
+
+/* Common box styling */
+.box {
+  width: 150px;
+  height: 100px;
+  line-height: 100px;
+  text-align: center;
+  color: white;
+  font-weight: bold;
+}
+
+/* Without perspective */
+.flat .box {
+  background: lightcoral;
+  transform: rotateY(45deg);
+}
+
+/* With perspective */
+.scene {
+  perspective: 90px; /* the "camera" distance */
+}
+
+.scene .box {
+  background: lightgreen;
+  transform: rotateY(45deg);
+}
+</style>
+
+</head>
+<body>
+<div class="container">
+  <!-- Without perspective -->
+  <div class="flat">
+    <div class="box">No Perspective</div>
+  </div>
+
+  <!-- With perspective -->
+  <div class="scene">
+    <div class="box">With Perspective</div>
+  </div>
+
+
+</div>
+</body>
+</html>
