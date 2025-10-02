@@ -28,13 +28,15 @@
     height: 100%;
     width: 100%;
     object-fit: cover;
-    z-index: -1;
+    
 }
 .background{
     transform: translateZ(-40px) scale(5);
+    z-index: -0;/* Places background at bottom */
 }
 .foreground{
     transform: translateZ(-20px) scale(3);
+    z-index: 1;/* Places foreground at top */
 }
 
 h1{
